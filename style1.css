@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #B2B1D3;
+}
+
+h2{
+    margin-top: 0px;
+    font-size: 40px;
+}
+
+h4{
+    margin-top: -570px;
+    color: white;
+}
+
+h5{
+    margin-top: 440px;
+    color:azure
+}
+
+h3{
+    margin-top: 600px;
+    font-size: 28px;
+    color: black;
+}
