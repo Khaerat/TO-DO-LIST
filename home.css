@@ -1,8 +1,9 @@
+/* I think i'm done here, if you feel we need to make changes please update me */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif
 }
 
 body {
@@ -10,26 +11,45 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
     background-color: #B2B1D3;
 }
 
-h2{
-    margin-top: 0px;
-    font-size: 40px;
+h4 {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
 }
 
-h4{
-    margin-top: -570px;
+.highlight {
     color: white;
 }
 
-h5{
-    margin-top: 440px;
-    color:azure
+.writer {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 20px;
+    color: #dcdaf2;
+    font-weight: bold;
 }
 
-h3{
-    margin-top: 600px;
-    font-size: 28px;
+button {
+    padding: 10px 80px;
+    background-color: white;
     color: black;
+    border: none;
+    border-radius: 22px;
+    font-size: 19px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+button:hover {
+    background-color: #908fb6;
+}
+
+.text-weight {
+    font-weight: bold;
 }
