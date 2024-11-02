@@ -1,11 +1,36 @@
 const todoInput = document.getElementById('todoInput');
-const todoList = document.getElementById('todoList');
+const listContainer = document.getElementById('list-container');
 
 function addTodo() {
-    if(todoInput.value.trim()){
-        todoList.innerHTML = '<li onclick ="this.classList.toggle(completed)">${todoInput.value} <button onclick= "event.stopPropagation(); this.parentElement.remove()"> Delete</button></li>'
-
-        todoInput.value='';
+    if(todoInput.value === ''){
+        alert("You must write something!");
     }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = todoInput.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML ="\u00d7";
+        li.appendChild(span);
+    }
+    todoInput.value = "";
+    saveData();
 }
-todoInput.addEventListener('keypress', e => e.key === 'Enter' && addTodo());
+
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveData();
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false);
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();

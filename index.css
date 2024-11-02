@@ -21,79 +21,83 @@ h3 {
     font-size: 25px;
 }
 
-.list {
-    font-size: 16px;
-    color: black;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    position: relative;
-    right: 90px;
-}
-
-.list button {
-    color: magenta;
-    background: none;
-    border: none;
-    text-align: left;
-    left: 0;
-    font-size: 35px;
-    margin-top: 28px;
-    font-weight: bold;
-    cursor: cell;
-    position: relative;
-}
 .input-section {
     display: flex;
     gap: 10px;
     position: absolute;
-    margin-bottom: 200px;
-    align-content: center;
+    margin-bottom: 230px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    background: transparent;
 }
 input {
     flex: 1;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    padding: 10px;
+    border: none;
+    outline: none;
     font-size: 15px;
+    padding: 10px;
     cursor: pointer;
-    background-color: #b9b8d2;
+    background: transparent;
 }
 button {
-    background-color: #b9b8d2;
     color: black;
     border: none;
-    border-radius: 22px;
+    outline: none;
+    padding: 14px 20px;
+    border-radius: 40px;
     font-size: 15px;
     cursor: pointer;
+    background-color: #b9b8d2;
 }
 button:hover {
-    background-color: white;
+    background-color: #908fb6;
 }
-input:hover {
-    background-color: white;
-}
-ul {
+ul li {
     list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+    right: 200px;
+    cursor: pointer;
 }
-li {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #b9b8d2;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid;
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 }
-li button {
-    margin-left: auto;
-    background-color: #b9b8d2;
-    padding: 5px 10px;
+ul li.checked {
+    color: #908fb6;
+    text-decoration: line-through;
 }
-li button:hover{
-    background-color: white;
+ul li.checked::before {
+    background-image: url(checked.png);
 }
+ul li span {
+    position: absolute;
+    left: 300px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover {
+    background: #908fb6;
+}
+
 .completed {
     text-decoration: line-through;
     color: black;
@@ -108,8 +112,31 @@ li button:hover{
 
 .footer button {
     font-size: 20px;
-    background: none;
     border: none;
     font-weight: bold;
     cursor: pointer;
+}
+.home button{
+        padding: 10px 80px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 22px;
+        margin-top: 50px;
+}
+    
+.home:hover {
+        background-color: #908fb6;
+}
+.calendar button {
+    padding: 10px 80px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 22px;
+    margin-top: 50px;
+}
+
+.calendar:hover {
+    background-color: #908fb6;
 }
